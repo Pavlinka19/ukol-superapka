@@ -1,0 +1,180 @@
+/* nejsme vcerejsi, pouzivame moderni box model */
+html { box-sizing: border-box; }
+*, ::after, ::before { box-sizing: inherit; }
+
+/*
+ BARVY
+ sede pozadi      #e5e5e5
+ svetle fialova   #48418e
+ tmave fialova    #25133d
+
+ POUZITE PISMO
+ Source Sans Pro - rezy pisma light 300, regular 400 a bold 700
+ https://fonts.google.com/specimen/Roboto
+*/
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #e5e5e5;
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.obal {
+    width: 960px; /* obsah stránky je omezený do pruhu širokého 960px */
+    margin: 0 auto; /* pruh je na stránce vycentrovaný */
+    background: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+/* ----- zde začni psát vlastní CSS ----- */
+.big {
+    display: flex;
+    flex-direction: column;
+}
+
+.top {
+    display: flex;
+    flex-direction: column;
+    background-image: url(./images/pozadi.jpg);
+    background-size: cover;
+    height: 30rem;
+    color: white;
+}
+
+.top img {
+    position: absolute;
+    display: flex;
+    margin-left: 555px;
+    margin-top: 80px;
+}
+
+
+.boxes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 55%;
+    margin-top: 380px;
+    padding-left: 40px;
+    position: relative;
+}
+.boxes a {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    text-decoration: none;
+    padding: 15px 25px 15px 25px;
+    font-size: 26px;
+    border: solid white 2px;
+    border-radius: 0.5rem;
+    justify-content: center;
+}
+
+.boxes a:hover {
+    background-color: #5653a0;
+}
+
+
+h1 {
+    padding-left: 40px;
+    font-size: 6rem;
+    font-weight: 500;
+    position: absolute;
+    
+}
+h2 {
+    font-weight: 100;
+    font-size: 3rem;
+    padding-left: 40px;
+    position: absolute;
+    padding-top: 170px;
+}
+
+.obal {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer {
+    display: flex;
+    background-color:#5653a0;
+    color: white;
+    padding: 1.5%;
+    justify-content: center;
+}
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    background-color: white;
+}
+
+.menu a {
+color: #5653a0;
+text-decoration: none;
+padding: 5px;
+font-size: 1.75rem;
+padding-left: 40px;
+}
+
+.menu a:hover {
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+
+}
+
+.bottom {
+    display: flex;
+}
+
+.bottom img {
+    height: 85px
+}
+
+.plane,
+.chat,
+.map {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 40px;
+    text-align: center;
+    padding-bottom: 40px;
+    padding-left: 40px;
+    padding-right: 40px;    
+}
+
+h3 {
+    color:  #48418e;
+    font-size: 1.6rem;
+}
+
+.plane img {
+    transition-duration: 2s;
+}
+
+.plane img:hover {
+    transform: rotate(400deg);
+}
+
+.chat img {
+    transition-duration: 1s;
+}
+
+.chat img:hover {
+    transform: scale(150%);
+}
+
+.map img{
+    transition-duration: 1s;
+}
+
+.map img:hover {
+    transform: skewY(16deg);
+}
